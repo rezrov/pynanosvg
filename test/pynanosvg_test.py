@@ -21,7 +21,7 @@ class TestNanoSvg(App):
     def setup(self):
         t1 = datetime.now()
         self._svg = NSVGImage()
-        self._svg.parse_from_file("/home/ron/src/pynanosvg/test/232.svg", "px", 96.0)
+        self._svg.parse_from_file("../test/232.svg", "px", 96.0)
         _tx = 0.0
         _ty = 0.0
         _scale = 0.6
