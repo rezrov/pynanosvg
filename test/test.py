@@ -37,9 +37,7 @@ class ImageTest(unittest.TestCase):
     def test_rasterize(self):
         img = self.create_image()
         self.load_image(img, self.image_file)
-        buffer = img.rasterize(0.0, 0.0, 1.0,
-                                    img.width(), img.height(),
-                                    img.width()*4)
+        buffer = img.rasterize(0.0, 0.0, 1.0, img.width(), img.height())
         self.assertIsNotNone(buffer, "Failed to rasterize image")
         self.assertIsInstance(buffer, bytes, "Rasterize did not return a bytes object")
         self.assertGreater(len(buffer), 0, "Rasterize returned an empty buffer")

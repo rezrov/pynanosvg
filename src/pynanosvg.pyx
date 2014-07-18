@@ -34,6 +34,8 @@ cdef class NSVGImage:
         of the parsed SVG image."""
         if self._c_nsvgimage == NULL:
             return None
+        w = int(w)
+        h = int(h)
         _len = w * h * 4
         _stride = w * 4
         _buf = bytes(_len)
