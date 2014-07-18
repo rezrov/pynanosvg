@@ -14,6 +14,8 @@ cdef extern from "nanosvg.h":
     NSVGimage* nsvgParse(char* input, char* units, float dpi)
     void nsvgDelete(NSVGimage* image)
 
+cdef extern from "nanosvgrast.h":
+
     ctypedef struct NSVGrasterizer:
         pass
     void nsvgRasterize(NSVGrasterizer* r, \

@@ -1,0 +1,20 @@
+python3
+
+from pynanosvg import NSVGImage
+from datetime import datetime
+from sys import path
+
+filename = "./tiger.svg"
+img = NSVGImage()
+img.parse_from_file(filename, "px", 96.0)
+buffer = img.rasterize(0.0, 0.0, 1.0, img.width(), img.height(), img.width()*4)
+len(buffer)
+id(buffer)
+
+filename = "./232.svg"
+img2 = NSVGImage()
+img2.parse_from_file(filename, "px", 96.0)
+buffer2 = img2.rasterize(0.0, 0.0, 1.0, img2.width(), img2.height(), img2.width()*4)
+len(buffer2)
+id(buffer2)
+
